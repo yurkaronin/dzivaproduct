@@ -1,0 +1,50 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html *,
+html *::before,
+html *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 365px;
+  overflow-x: hidden;
+  font-family: 'Oswald', sans-serif;
+  line-height: 1.5;
+  background-color: #ffffff;
+  position: relative;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #4A4A4A;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+input,
+textarea,
+a,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:focus {
+  outline-style: none;
+  outline-width: 0px !important;
+  outline-color: none !important;
+}

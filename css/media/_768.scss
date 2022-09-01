@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+  .header__wrap {
+    padding: 0 40px;
+  }
+
+  .mobile-menu__link {
+    padding: 30px 40px;
+
+    &::after {
+      width: calc(100% - 80px);
+      left: 40px;
+    }
+  }
+}

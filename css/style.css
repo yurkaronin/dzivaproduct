@@ -213,23 +213,6 @@ input[type=radio].visually-hidden {
   left: 0;
   text-decoration: none;
   z-index: 5;
-  /* svg {
-    width: 72px;
-    height: 72px;
-    position: relative;
-    z-index: 5;
-
-    path {
-      fill: #91C137;
-      transition: all 0.3s;
-    }
-
-    .spec {
-      stroke: #91C137;
-      fill: none;
-      transition: all 0.3s;
-    }
-  } */
 }
 .header__logo .logo::after {
   content: "";
@@ -243,18 +226,6 @@ input[type=radio].visually-hidden {
   border-radius: 50%;
   background: transparent;
   transition: all 0.2s;
-}
-.header__logo .logo:hover {
-  /* svg {
-    path {
-      fill: #374818;
-    }
-
-    .spec {
-      stroke: #374818;
-      fill: none;
-    }
-  } */
 }
 .header__logo .logo__wrapper {
   background-color: #fff;
@@ -583,7 +554,6 @@ input[type=radio].visually-hidden {
   transform: translate3d(0, 0, 0);
   visibility: visible;
 }
-
 @media (max-width: 650px) {
   .mob-menu-open .logo::after {
     background: linear-gradient(to bottom, #fff 85%, #DFDFDF 15%);

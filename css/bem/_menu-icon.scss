@@ -1,0 +1,60 @@
+.menu-icon {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 14px;
+}
+
+.menu-icon span {
+  margin: 0 auto;
+  position: relative;
+  top: 6px;
+}
+
+.menu-icon span:before,
+.menu-icon span:after {
+  position: absolute;
+  content: '';
+}
+
+.menu-icon span,
+.menu-icon span:before,
+.menu-icon span:after {
+  width: 24px;
+  height: 2px;
+  background-color: #ffffff;
+  display: block;
+}
+
+.menu-icon span:before {
+  margin-top: -6px;
+}
+
+.menu-icon span:after {
+  margin-top: 6px;
+}
+
+.menu-icon span {
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.menu-icon span:before {
+  -webkit-transition-property: margin, -webkit-transform;
+  transition-property: margin, transform;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-delay: 0.2s, 0s;
+  transition-delay: 0.2s, 0s;
+}
+
+.menu-icon span:after {
+  -webkit-transition-property: margin, -webkit-transform;
+  transition-property: margin, transform;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-delay: 0.2s, 0s;
+  transition-delay: 0.2s, 0s;
+}

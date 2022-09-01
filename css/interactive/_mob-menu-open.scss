@@ -1,0 +1,55 @@
+.mob-menu-open {
+  .header {
+    border-bottom: 1px solid #DFDFDF;
+    box-shadow: none !important;
+  }
+
+  .logo::after {
+    background: linear-gradient(to bottom, #fff 57%, #DFDFDF 53%);
+  }
+
+  // иконка меню 
+  .menu-icon span {
+    background-color: transparent;
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+  }
+
+  .menu-icon span:before {
+    margin-top: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition-delay: 0s, 0.2s;
+    transition-delay: 0s, 0.2s;
+  }
+
+  .menu-icon span:after {
+    margin-top: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transition-delay: 0s, 0.2s;
+    transition-delay: 0s, 0.2s;
+  }
+
+  // мобильное меню 
+  .mobile-menu {
+    overflow: auto;
+    margin-left: 0;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  @media (max-width: 650px) {
+    .logo::after {
+      background: linear-gradient(to bottom, #fff 85%, #DFDFDF 15%);
+    }
+
+    .header__tel {
+      opacity: 0;
+    }
+
+  }
+
+  
+}
