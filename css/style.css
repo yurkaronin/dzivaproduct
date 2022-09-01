@@ -21,7 +21,7 @@ html *::after {
 
 body {
   margin: 0;
-  min-width: 375px;
+  min-width: 365px;
   overflow-x: hidden;
   font-family: "Oswald", sans-serif;
   line-height: 1.5;
@@ -213,6 +213,23 @@ input[type=radio].visually-hidden {
   left: 0;
   text-decoration: none;
   z-index: 5;
+  /* svg {
+    width: 72px;
+    height: 72px;
+    position: relative;
+    z-index: 5;
+
+    path {
+      fill: #91C137;
+      transition: all 0.3s;
+    }
+
+    .spec {
+      stroke: #91C137;
+      fill: none;
+      transition: all 0.3s;
+    }
+  } */
 }
 .header__logo .logo::after {
   content: "";
@@ -227,27 +244,17 @@ input[type=radio].visually-hidden {
   background: transparent;
   transition: all 0.2s;
 }
-.header__logo .logo svg {
-  width: 72px;
-  height: 72px;
-  position: relative;
-  z-index: 5;
-}
-.header__logo .logo svg path {
-  fill: #91C137;
-  transition: all 0.3s;
-}
-.header__logo .logo svg .spec {
-  stroke: #91C137;
-  fill: none;
-  transition: all 0.3s;
-}
-.header__logo .logo:hover svg path {
-  fill: #374818;
-}
-.header__logo .logo:hover svg .spec {
-  stroke: #374818;
-  fill: none;
+.header__logo .logo:hover {
+  /* svg {
+    path {
+      fill: #374818;
+    }
+
+    .spec {
+      stroke: #374818;
+      fill: none;
+    }
+  } */
 }
 .header__logo .logo__wrapper {
   background-color: #fff;
@@ -414,6 +421,126 @@ input[type=radio].visually-hidden {
   display: none;
 }
 
+.mobile-menu__footer {
+  display: none;
+}
+
+@media (max-width: 1300px) {
+  .header {
+    padding: 12px 0 12px;
+  }
+  .header__wrap {
+    padding: 0 48px;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header__tel {
+    margin-left: auto;
+  }
+  .header__menu-btn {
+    display: block;
+  }
+  .header__menu-btn .btn--menu {
+    box-shadow: none;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-size: 14px;
+    text-transform: lowercase;
+    padding: 8px 16px;
+  }
+  .header__menu-btn .btn--menu:hover {
+    background-color: #91C137;
+    border-color: #91C137;
+  }
+}
+@media (max-width: 768px) {
+  .header__wrap {
+    padding: 0 40px;
+  }
+  .mobile-menu__link {
+    padding: 30px 40px;
+  }
+  .mobile-menu__link::after {
+    width: calc(100% - 80px);
+    left: 40px;
+  }
+}
+@media (max-width: 650px) {
+  .header__wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .header__btn {
+    display: none;
+  }
+  .header__logo {
+    width: 60px;
+  }
+  .header__logo .logo {
+    width: 60px;
+    height: 60px;
+    top: -24px;
+    left: -6px;
+  }
+  .header__logo .logo__wrapper {
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+  }
+  .header__logo .logo svg {
+    width: 50px;
+    height: 50px;
+  }
+  .header__logo .logo::after {
+    width: 62px;
+    height: 62px;
+  }
+  .mobile-menu__link {
+    font-size: 16px;
+    padding: 24px 20px;
+  }
+  .mobile-menu__link::after {
+    width: calc(100% - 40px);
+    left: 20px;
+  }
+  .mobile-menu {
+    padding-top: 55px;
+    min-width: 365px;
+  }
+  .mobile-menu__footer {
+    margin: 40px 0;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: center;
+  }
+  .mobile-menu__btn .btn {
+    background-color: #ffffff;
+    color: #91C137;
+    box-shadow: none;
+    transition: all 0.3s;
+    border-color: #91C137;
+  }
+  .mobile-menu__btn .btn:hover {
+    background-color: #91C137;
+    color: #fff;
+    border-color: #91C137;
+  }
+  .mobile-menu__tel a {
+    font-size: 20px;
+  }
+}
+@media (max-width: 360px) {
+  .header__tel {
+    display: none;
+  }
+  .header__menu-btn {
+    margin-left: auto;
+  }
+}
 .header-sticky .header {
   position: fixed;
   width: 100%;
@@ -457,33 +584,11 @@ input[type=radio].visually-hidden {
   visibility: visible;
 }
 
-@media (max-width: 1300px) {
-  .header {
-    padding: 12px 0 12px;
+@media (max-width: 650px) {
+  .mob-menu-open .logo::after {
+    background: linear-gradient(to bottom, #fff 85%, #DFDFDF 15%);
   }
-  .header__wrap {
-    padding: 0 48px;
-  }
-  .header__menu {
-    display: none;
-  }
-  .header__tel {
-    margin-left: auto;
-  }
-  .header__menu-btn {
-    display: block;
-  }
-  .header__menu-btn .btn--menu {
-    box-shadow: none;
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    font-size: 14px;
-    text-transform: lowercase;
-    padding: 8px 16px;
-  }
-  .header__menu-btn .btn--menu:hover {
-    background-color: #91C137;
-    border-color: #91C137;
+  .mob-menu-open .header__tel {
+    opacity: 0;
   }
 }
