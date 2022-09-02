@@ -390,6 +390,40 @@ input[type=radio].visually-hidden {
   display: none;
 }
 
+@media (max-width: 1300px) {
+  .header {
+    padding: 12px 0 12px;
+  }
+  .header__wrap {
+    padding: 0 48px;
+  }
+  .header__menu {
+    display: none;
+  }
+  .header__tel {
+    margin-left: auto;
+  }
+  .header__menu-btn {
+    display: block;
+  }
+  .header__menu-btn .btn--menu {
+    font-family: "Inter", sans-serif;
+    min-height: 32px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-size: 14px;
+    text-transform: lowercase;
+    padding: 8px 16px;
+    box-shadow: none;
+    transform: none;
+    border: none;
+  }
+  .header__menu-btn .btn--menu:hover {
+    background-color: #91C137;
+    border-color: #91C137;
+  }
+}
 .mobile-menu {
   background-color: #fff;
   color: #4A4A4A;
@@ -474,24 +508,25 @@ input[type=radio].visually-hidden {
 .first {
   background-color: #FBFAF8;
   background-image: url(../img/bg-1.jpg);
-  background-position: center;
+  background-position: top 50px center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   overflow: hidden;
-  /* .swiper-button-next {
-      right: 40px;
-      left: auto;
-  } */
 }
 .first .wrap {
   display: flex;
   max-height: 100vh;
   height: 100%;
-  padding-top: 110px;
+  padding-top: 20%;
   position: relative;
   align-items: center;
   min-height: 768px;
+}
+.first .swiper-button-next {
+  right: -2px;
+  left: auto;
+  top: 47.5%;
 }
 
 .first__content {
@@ -528,37 +563,8 @@ input[type=radio].visually-hidden {
 }
 
 @media (max-width: 1300px) {
-  .header {
-    padding: 12px 0 12px;
-  }
-  .header__wrap {
-    padding: 0 48px;
-  }
-  .header__menu {
-    display: none;
-  }
-  .header__tel {
-    margin-left: auto;
-  }
-  .header__menu-btn {
-    display: block;
-  }
-  .header__menu-btn .btn--menu {
-    font-family: "Inter", sans-serif;
-    min-height: 32px;
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    font-size: 14px;
-    text-transform: lowercase;
-    padding: 8px 16px;
-    box-shadow: none;
-    transform: none;
-    border: none;
-  }
-  .header__menu-btn .btn--menu:hover {
-    background-color: #91C137;
-    border-color: #91C137;
+  .first {
+    background-position: top -30px center;
   }
   .first .wrap {
     padding: 0 48px;
@@ -577,6 +583,9 @@ input[type=radio].visually-hidden {
   .first__slider img {
     width: 528px;
     transform: translate(-65px, -20px);
+  }
+  .first .swiper-button-next {
+    top: 47%;
   }
 }
 @media (max-width: 960px) {
@@ -718,7 +727,7 @@ input[type=radio].visually-hidden {
   }
 }
 .main {
-  padding: 0 40px;
+  padding: 0 30px;
   background-color: #fff;
 }
 @media (max-width: 1440px) {
