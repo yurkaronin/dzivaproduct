@@ -17,6 +17,7 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -133,21 +134,64 @@
   <main class="main">
     <section class="first">
       <div class="wrap">
-        
-        <div class="section-head">
-          <p class="section-head__subtitle">Компания отработала эффективный алгоритм запуска СТМ*</p>
-          <h1 class="section-head__title">Запуск собственного бренда за 14 дней</h1>
+
+        <div class="first__content">
+          <div class="section-head">
+            <p class="section-head__subtitle">Компания отработала эффективный алгоритм запуска СТМ*</p>
+            <h1 class="section-head__title">Запуск собственного бренда за 14 дней</h1>
+          </div>
+
+          <p class="first__text">* - Собственная торговая марка (СТМ) – это когда производитель выпускает продукцию под
+            брендом заказчика.</p>
+
+          <a href="#" class="btn">Заказать консультацию</a>
+        </div>
+        <div class="first__slider">
+          <!-- Slider main container -->
+          <div class="swiper js-first-slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <picture>
+                  <!-- <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg"> -->
+                  <source media="(max-width: 1300px)" srcset="./img/first-product-1-528.png">
+                  <img src="./img/first-product-1.png" alt="Фото товара" width="862">
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <!-- <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg"> -->
+                  <source media="(max-width: 1300px)" srcset="./img/first-product-2-528.png">
+                  <img src="./img/first-product-2.png" alt="Фото товара" width="862">
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <!-- <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg"> -->
+                  <source media="(max-width: 1300px)" srcset="./img/first-product-3-528.png">
+                  <img src="./img/first-product-3.png" alt="Фото товара" width="862">
+                </picture>
+              </div>
+            </div>
+
+            <!-- If we need navigation buttons -->
+            <button class="swiper-button-next">
+              <svg width="32" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27 5H1" stroke="#91C137" stroke-width="2" stroke-linecap="round" />
+                <path  class="cust" d="m32 5-8 5V0l8 5Z" fill="#91C137" /></svg>
+            </button>
+
+          </div>
         </div>
 
-        <p>* - Собственная торговая марка (СТМ) – это когда производитель выпускает продукцию под брендом заказчика.</p>
 
-        <a href="#" class="btn">Заказать консультацию</a>
 
       </div>
     </section>
   </main>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="./js/script.js"></script>
 </body>
 

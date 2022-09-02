@@ -82,5 +82,28 @@
     }
   }
 
+  .first {
+    background-position: top -30px center;
+    // background-image: url(../img/bg-1-991.jpg);
+  }
 
+  .first .wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .section-head__subtitle {
+    font-size: 14px;
+  }
+  .section-head__title {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  .first__text {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 23px 40px;
+    min-height: 63px;
+  }
 }

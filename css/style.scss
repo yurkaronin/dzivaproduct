@@ -8,5 +8,14 @@
 @import "sections/sections";
 @import "media/media";
 
+.main {
+  padding: 0 40px;
+  background-color: #fff;
+  
+  @media (max-width: 1440px) {
+    padding: 0;
+  }
+}
+
 @import "interactive/header-sticky";
 @import "interactive/mob-menu-open";

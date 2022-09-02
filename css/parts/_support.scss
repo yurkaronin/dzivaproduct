@@ -19,3 +19,43 @@ input[type=radio].visually-hidden {
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  border: none;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  transition: all 0.3s;
+  top: 45.5%;
+
+  svg path {
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    background-color: #91C137;
+
+    svg path {
+      stroke: #ffffff;
+    }
+
+    svg .cust {
+      stroke: none;
+      fill: #ffffff;
+    }
+  }
+
+  &:after {
+    display: none;
+  }
+
+  @media (max-width: 650px) {
+    width: 60px;
+    height: 60px;
+  }
+}

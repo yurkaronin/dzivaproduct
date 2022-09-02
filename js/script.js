@@ -20,4 +20,22 @@ document.addEventListener("DOMContentLoaded", () => {
     // headerSearch.classList.remove('active');
   });
 
+  // слайдер в первом экране 
+  const firstSwiper = new Swiper('.js-first-slider', {
+    // Optional parameters
+    // direction: 'vertical',
+    loop: true,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.js-first-slider .swiper-button-next'
+
+    }
+
+  });
+
 });

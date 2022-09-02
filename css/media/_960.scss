@@ -1,0 +1,38 @@
+@media (max-width: 960px) {
+
+  .first {
+    padding-bottom: 70px;
+  }
+
+  .first .wrap {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    padding: 0 40px;
+    max-height: initial;
+    height: initial;
+    min-height: initial;
+    padding-top: 140px;
+  }
+
+  .first__content {
+    max-width: 100%;
+    margin-top: -67px;
+  }
+
+  .first__slider {
+    max-width: 100%;
+  }
+
+  .first__slider img {
+    width: 100%;
+    transform: none;
+    max-width: 591px;
+  }
+
+  .first__slider .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}

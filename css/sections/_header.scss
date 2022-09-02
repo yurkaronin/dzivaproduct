@@ -127,6 +127,7 @@
   width: 100%;
 
   .btn {
+    font-family: 'Inter', sans-serif;
     width: 100%;
     font-size: 14px;
     color: #91C137;
@@ -137,6 +138,8 @@
     border-radius: 16px;
     text-transform: lowercase;
     transition: all 0.3s;
+    min-height: 32px;
+    transform: none;
 
     &:hover {
       background-color: #91C137;

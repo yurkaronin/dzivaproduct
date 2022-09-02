@@ -81,6 +81,48 @@ input[type=radio].visually-hidden {
   clip-path: inset(100%);
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  border: none;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  transition: all 0.3s;
+  top: 45.5%;
+}
+.swiper-button-next svg path,
+.swiper-button-prev svg path {
+  transition: all 0.3s;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #91C137;
+}
+.swiper-button-next:hover svg path,
+.swiper-button-prev:hover svg path {
+  stroke: #ffffff;
+}
+.swiper-button-next:hover svg .cust,
+.swiper-button-prev:hover svg .cust {
+  stroke: none;
+  fill: #ffffff;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  display: none;
+}
+@media (max-width: 650px) {
+  .swiper-button-next,
+.swiper-button-prev {
+    width: 60px;
+    height: 60px;
+  }
+}
+
 .wrap {
   max-width: 1392px;
   padding: 0 40px;
@@ -89,29 +131,59 @@ input[type=radio].visually-hidden {
 }
 
 .btn {
-  font-family: "Inter", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 11px;
+  font-size: 16px;
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 8px 14px;
-  min-height: 32px;
+  padding: 32px 40px;
+  min-height: 83px;
   background-color: #91C137;
-  box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0.7), inset 0px 4px 24px rgba(255, 255, 255, 0.4);
-  border: 1px solid #91C137;
-  border-radius: 16px;
   text-transform: uppercase;
   transition: all 0.3s;
   color: #ffffff;
   cursor: pointer;
+  max-width: max-content;
+  border-radius: 40px;
+  box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0.7), inset 0px 4px 24px rgba(255, 255, 255, 0.4), 0 3px 0 #6D912B;
+  transform: translateY(-3px);
 }
 .btn:hover {
   background: #0580F2;
-  border-color: #0580F2;
+  box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0.7), inset 0px 4px 24px rgba(255, 255, 255, 0.4), 0 3px 0 #0466C2;
+  color: #ffffff;
+}
+.btn:active {
+  text-decoration: none;
+  transform: translateY(-1px);
+  background-color: #0466C2;
+  box-shadow: 0 1px 0 #0466C2;
+  color: #ffffff;
+}
+
+.section-head__subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #91C137;
+  display: block;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.section-head__title {
+  font-weight: 250;
+  font-size: 64px;
+  line-height: 1.12;
+  color: #374818;
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .menu-icon {
@@ -295,6 +367,7 @@ input[type=radio].visually-hidden {
   width: 100%;
 }
 .header__btn .btn {
+  font-family: "Inter", sans-serif;
   width: 100%;
   font-size: 14px;
   color: #91C137;
@@ -305,6 +378,8 @@ input[type=radio].visually-hidden {
   border-radius: 16px;
   text-transform: lowercase;
   transition: all 0.3s;
+  min-height: 32px;
+  transform: none;
 }
 .header__btn .btn:hover {
   background-color: #91C137;
@@ -396,6 +471,62 @@ input[type=radio].visually-hidden {
   display: none;
 }
 
+.first {
+  background-color: #FBFAF8;
+  background-image: url(../img/bg-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+  /* .swiper-button-next {
+      right: 40px;
+      left: auto;
+  } */
+}
+.first .wrap {
+  display: flex;
+  max-height: 100vh;
+  height: 100%;
+  padding-top: 110px;
+  position: relative;
+  align-items: center;
+  min-height: 768px;
+}
+
+.first__content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 50%;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.first__slider {
+  max-width: 50%;
+  width: 100%;
+}
+.first__slider .swiper {
+  overflow: initial;
+}
+.first__slider img {
+  width: 862px;
+  max-width: initial;
+  transform: translateX(-127px);
+}
+
+.first__text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #4A4A4A;
+  opacity: 0.7;
+  margin: 0;
+  margin-bottom: 37px;
+}
+
 @media (max-width: 1300px) {
   .header {
     padding: 12px 0 12px;
@@ -413,17 +544,70 @@ input[type=radio].visually-hidden {
     display: block;
   }
   .header__menu-btn .btn--menu {
-    box-shadow: none;
+    font-family: "Inter", sans-serif;
+    min-height: 32px;
     display: flex;
     gap: 16px;
     align-items: center;
     font-size: 14px;
     text-transform: lowercase;
     padding: 8px 16px;
+    box-shadow: none;
+    transform: none;
+    border: none;
   }
   .header__menu-btn .btn--menu:hover {
     background-color: #91C137;
     border-color: #91C137;
+  }
+  .first .wrap {
+    padding: 0 48px;
+    min-height: 822px;
+  }
+  .section-head__subtitle {
+    margin-bottom: 2px;
+  }
+  .section-head__title {
+    font-size: 56px;
+  }
+  .first__text {
+    font-size: 16px;
+    margin-bottom: 26px;
+  }
+  .first__slider img {
+    width: 528px;
+    transform: translate(-65px, -20px);
+  }
+}
+@media (max-width: 960px) {
+  .first {
+    padding-bottom: 70px;
+  }
+  .first .wrap {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    padding: 0 40px;
+    max-height: initial;
+    height: initial;
+    min-height: initial;
+    padding-top: 140px;
+  }
+  .first__content {
+    max-width: 100%;
+    margin-top: -67px;
+  }
+  .first__slider {
+    max-width: 100%;
+  }
+  .first__slider img {
+    width: 100%;
+    transform: none;
+    max-width: 591px;
+  }
+  .first__slider .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media (max-width: 768px) {
@@ -503,6 +687,27 @@ input[type=radio].visually-hidden {
   .mobile-menu__tel a {
     font-size: 20px;
   }
+  .first {
+    background-position: top -30px center;
+  }
+  .first .wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .section-head__subtitle {
+    font-size: 14px;
+  }
+  .section-head__title {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  .first__text {
+    font-size: 14px;
+  }
+  .btn {
+    padding: 23px 40px;
+    min-height: 63px;
+  }
 }
 @media (max-width: 360px) {
   .header__tel {
@@ -512,6 +717,16 @@ input[type=radio].visually-hidden {
     margin-left: auto;
   }
 }
+.main {
+  padding: 0 40px;
+  background-color: #fff;
+}
+@media (max-width: 1440px) {
+  .main {
+    padding: 0;
+  }
+}
+
 .header-sticky .header {
   position: fixed;
   width: 100%;
