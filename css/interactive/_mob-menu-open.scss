@@ -4,8 +4,12 @@
     box-shadow: none !important;
   }
 
-  .logo::after {
-    background: linear-gradient(to bottom, #fff 57%, #DFDFDF 53%);
+  .header__logo-link {
+    box-shadow: none;
+  }
+
+  .header__logo-link::after {
+    background: linear-gradient(to bottom, #fff 59%, #DFDFDF 41%);
   }
 
   // иконка меню 
@@ -41,7 +45,7 @@
   }
 
   @media (max-width: 650px) {
-    .logo::after {
+    .header__logo-link::after {
       background: linear-gradient(to bottom, #fff 85%, #DFDFDF 15%);
     }
 
