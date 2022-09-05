@@ -10,19 +10,21 @@
   top: 0;
   z-index: 100;
   border: 1px solid transparent;
-}
 
-.header__wrap {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
 
-.header__logo {
-  width: 88px;
-  position: relative;
+  &__wrap {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
 
-  .logo {
+  &__logo {
+    width: 88px;
+    position: relative;
+
+  }
+
+  &__logo-link {
     width: 88px;
     height: 88px;
     display: flex;
@@ -53,7 +55,7 @@
 
   }
 
-  .logo__wrapper {
+  &__logo-wrapper {
     background-color: #fff;
     position: relative;
     z-index: 5;
@@ -66,130 +68,141 @@
     justify-content: center;
   }
 
-
-}
-
-.header__menu {
-  flex-grow: 2;
-  margin-left: 10px;
-}
-
-.menu__list {
-  display: flex;
-  gap: 32px;
-  flex-wrap: wrap;
-}
-
-.menu__link {
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 16px;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: #4A4A4A;
-  transition: all 0.3s;
-  position: relative;
-  padding-bottom: 20px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #91C137;
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform .3s ease;
+  &__menu {
+    flex-grow: 2;
+    margin-left: 10px;
   }
 
-  &:hover {
-    color: #91C137;
-
-    &::before {
-      transform: scaleX(1);
-    }
-  }
-}
-
-.header__tel {
-  color: #374818;
-  transition: all 0.3s;
-  max-width: 152px;
-  width: 100%;
-  text-align: right;
-}
-
-.header__btn {
-  max-width: 145px;
-  width: 100%;
-
-  .btn {
-    font-family: 'Inter', sans-serif;
-    width: 100%;
-    font-size: 14px;
-    color: #91C137;
-    padding: 8px 14px;
-    background-color: #FFFFFF;
-    border: 1px solid #91C137;
-    box-shadow: none;
-    border-radius: 16px;
-    text-transform: lowercase;
+  &__tel {
+    color: #374818;
     transition: all 0.3s;
-    min-height: 32px;
-    transform: none;
-
-    &:hover {
-      background-color: #91C137;
-      color: #ffffff;
-    }
-  }
-}
-
-.header__menu-btn {
-  display: none;
-}
-
-@media (max-width: 1300px) {
-  .header {
-    padding: 12px 0 12px;
+    max-width: 152px;
+    width: 100%;
+    text-align: right;
   }
 
-  .header__wrap {
-    padding: 0 48px;
-  }
+  &__btn {
+    max-width: 145px;
+    width: 100%;
 
-  .header__menu {
-    display: none;
-  }
-
-  .header__tel {
-    margin-left: auto;
-  }
-
-  .header__menu-btn {
-    display: block;
-
-    .btn--menu {
+    .btn {
       font-family: 'Inter', sans-serif;
-      min-height: 32px;
-      display: flex;
-      gap: 16px;
-      align-items: center;
+      width: 100%;
       font-size: 14px;
-      text-transform: lowercase;
-      padding: 8px 16px;
+      color: #91C137;
+      padding: 8px 14px;
+      background-color: #FFFFFF;
+      border: 1px solid #91C137;
       box-shadow: none;
+      border-radius: 16px;
+      text-transform: lowercase;
+      transition: all 0.3s;
+      min-height: 32px;
       transform: none;
-      border: none;
 
       &:hover {
         background-color: #91C137;
-        border-color: #91C137;
+        color: #ffffff;
       }
     }
-
   }
+
+  &__menu-btn {
+    display: none;
+  }
+
+  @media (max-width: 1300px) {
+    padding: 12px 0 12px;
+
+    &__wrap {
+      padding: 0 48px;
+    }
+
+    &__menu {
+      display: none;
+    }
+
+    &__tel {
+      margin-left: auto;
+    }
+
+    &__menu-btn {
+      display: block;
+
+      .btn--menu {
+        font-family: 'Inter', sans-serif;
+        min-height: 32px;
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        font-size: 14px;
+        text-transform: lowercase;
+        padding: 8px 16px;
+        box-shadow: none;
+        transform: none;
+        border: none;
+
+        &:hover {
+          background-color: #91C137;
+          border-color: #91C137;
+        }
+      }
+
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__wrap {
+      padding: 0 40px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    &__wrap {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &__btn {
+      display: none;
+    }
+
+    &__logo {
+      width: 60px;
+    }
+
+    &__logo-link {
+      width: 60px;
+      height: 60px;
+      top: -24px;
+      left: -6px;
+    }
+
+    &__logo-wrapper {
+      width: 60px;
+      height: 60px;
+      padding: 5px;
+    }
+
+    &__logo svg {
+      width: 50px;
+      height: 50px;
+    }
+
+    &__logo-link::after {
+      width: 62px;
+      height: 62px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    &__tel {
+      display: none;
+    }
+
+    &__menu-btn {
+      margin-left: auto;
+    }
+  }
+
 }
