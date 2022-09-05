@@ -1,33 +1,12 @@
 .wrap {
-  max-width: 1392px;
-  padding: 0 40px;
+  max-width: 1408px;
+  padding: 0 48px;
   width: 100%;
   margin: 0 auto;
 }
 
-.section-head {}
 
-.section-head__subtitle {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #91C137;
-  display: block;
-  margin: 0;
-  margin-bottom: 10px;
-}
-
-.section-head__title {
-  font-weight: 250;
-  font-size: 64px;
-  line-height: 1.12;
-  color: #374818;
-  margin: 0;
-  margin-bottom: 25px;
-}
 
 @import "btn";
 @import "menu-icon";
-
+@import "section-head";

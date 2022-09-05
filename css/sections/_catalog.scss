@@ -1,0 +1,97 @@
+.catalog {
+  padding: 70px 0;
+  background-color: #FBFAF8;
+  overflow: hidden;
+
+  .section-head {
+    margin-bottom: 40px;
+  }
+
+  .swiper {
+    overflow: visible;
+  }
+
+  &__item {
+    background: #FFFFFF;
+    border-radius: 40px;
+    display: block;
+    padding: 32px;
+    padding-bottom: 23px;
+    // margin: 32px;
+    position: relative;
+
+    a {
+      display: flex;
+      z-index: 2;
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border: 0.0625rem solid rgba(var(--color-black-rgb), 0.1);
+      background-color: #ffffff;
+      border-radius: 40px;
+
+      transition-property: left, top, width, height, border-color, -webkit-box-shadow;
+      transition-property: left, top, width, height, border-color, box-shadow;
+      transition-property: left, top, width, height, border-color, box-shadow, -webkit-box-shadow;
+      transition-duration: 0.3s;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 1;
+    }
+
+    img {
+      display: block;
+      margin-bottom: 10px;
+      width: 100%;
+      max-width: 173px;
+      max-height: 173px;
+      object-fit: cover;
+    }
+
+    &:hover {
+
+      &::before {
+        left: -8px;
+        top: -8px;
+        width: calc(100% + 16px);
+        height: calc(100% + 16px);
+        border-color: #ffffff;
+        box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.2);
+      }
+
+    }
+
+  }
+
+  &__item-name {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #4A4A4A;
+    margin: 0;
+  }
+
+  @media (max-width: 1440px) {
+    .swiper-button-prev {
+      left: -32px;
+      background-color: #fbfaf8;
+    }
+
+    .swiper-button-next {
+      right: -32px;
+      background-color: #fbfaf8;
+    }
+  }
+}

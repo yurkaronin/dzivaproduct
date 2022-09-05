@@ -38,7 +38,7 @@ input[type=radio].visually-hidden {
   }
 
   &:hover {
-    background-color: #91C137;
+    background-color: #91C137 !important;
 
     svg path {
       stroke: #ffffff;
@@ -58,4 +58,8 @@ input[type=radio].visually-hidden {
     width: 60px;
     height: 60px;
   }
+}
+
+.swiper-button-disabled {
+  opacity: 0 !important;
 }

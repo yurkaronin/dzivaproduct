@@ -7,15 +7,17 @@
   background-attachment: fixed;
   overflow: hidden;
 
+  padding: 70px 0;
+  max-height: 100vh;
+  height: 100%;
+  min-height: 768px;
+  top: 20px;
+  padding-bottom: 0;
+
   .wrap {
     display: flex;
-    // flex-wrap: wrap;
-    max-height: 100vh;
-    height: 100%;
-    padding-top: 20%;
     position: relative;
     align-items: center;
-    min-height: 768px;
   }
 
   .swiper-button-next {
@@ -62,10 +64,12 @@
 
   @media (max-width: 1300px) {
     background-position: top -30px center;
+    max-height: initial;
+    height: initial;
+    min-height: initial;
 
     .wrap {
       padding: 0 48px;
-      min-height: 822px;
     }
 
     .section-head__subtitle {
@@ -97,16 +101,16 @@
   }
 
   @media (max-width: 960px) {
-    padding-bottom: 70px;
+    max-height: initial;
+    height: initial;
+    min-height: initial;
 
     .wrap {
       flex-wrap: wrap;
       flex-direction: column-reverse;
       padding: 0 40px;
-      max-height: initial;
-      height: initial;
-      min-height: initial;
-      padding-top: 140px;
+
+      // padding-top: 140px;
     }
 
     &__content {

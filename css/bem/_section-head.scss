@@ -1,0 +1,40 @@
+.section-head {
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #91C137;
+    display: block;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    font-weight: 250;
+    font-size: 64px;
+    line-height: 1.12;
+    color: #374818;
+    margin: 0;
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: 1440px) {
+    &__title {
+      font-size: 56px;
+    }
+
+  }
+
+  @media (max-width: 650px) {
+    &__title {
+      font-size: 32px;
+    }
+    &__subtitle {
+      font-size: 14px;
+    }
+  }
+
+}

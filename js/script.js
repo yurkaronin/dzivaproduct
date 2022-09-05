@@ -39,3 +39,49 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+// слайдер каталог 
+const catalogSlider = new Swiper('.js-catalog-slider', {
+  // Optional parameters
+  // loop: true,
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 32,
+      loop: true,
+    },
+    // when window width is >= 480px
+    
+    650: {
+      slidesPerView: 2,
+      spaceBetween: 32,
+      loop: true,
+    },
+    769: {
+      slidesPerView: 3,
+      spaceBetween: 32,
+      loop: true,
+    },
+    // 1025: {
+    //   slidesPerView: 3,
+    //   spaceBetween: 32,
+    //   loop: true,
+    // },
+    1025: {
+      slidesPerView: 4,
+      spaceBetween: 32,
+      loop: true,
+    },
+    // when window width is >= 640px
+    1441: {
+      slidesPerView: 5,
+      spaceBetween: 32
+    }
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.js-catalog-slider .swiper-button-next',
+    prevEl: '.js-catalog-slider .swiper-button-prev',
+  }
+});
