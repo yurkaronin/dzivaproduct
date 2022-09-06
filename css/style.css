@@ -155,6 +155,7 @@ input[type=radio].visually-hidden {
   border-radius: 40px;
   box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0.7), inset 0px 4px 24px rgba(255, 255, 255, 0.4), 0 3px 0 #6D912B;
   transform: translateY(-3px);
+  border: none;
 }
 .btn:hover {
   background: #0580F2;
@@ -923,6 +924,198 @@ input[type=radio].visually-hidden {
   .advantages .advantages__list .list-reset {
     gap: 54px;
     grid-template-columns: 1fr;
+  }
+}
+
+.collaboration {
+  padding: 120px 0 125px;
+  background-color: #FFD22F;
+  color: #374818;
+  position: relative;
+  overflow: hidden;
+}
+.collaboration .section-head--border::after {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.collaboration .section-head__subtitle {
+  color: #FFFFFF;
+  margin: 0;
+}
+.collaboration .section-head__title {
+  font-size: 56px;
+  line-height: 1.14;
+  color: #374818;
+}
+.collaboration__content {
+  max-width: 640px;
+  position: relative;
+  z-index: 2;
+}
+.collaboration__image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  max-height: 100%;
+}
+.collaboration__image img {
+  display: block;
+  object-fit: cover;
+  max-height: 100%;
+  height: 100%;
+}
+@media (max-width: 1816px) {
+  .collaboration__image {
+    right: -10%;
+  }
+}
+@media (max-width: 1536px) {
+  .collaboration__image {
+    right: -16%;
+  }
+}
+@media (max-width: 1360px) {
+  .collaboration__image {
+    right: -24%;
+  }
+}
+@media (max-width: 1275px) {
+  .collaboration {
+    padding: 77px 0 70px;
+  }
+  .collaboration__image {
+    right: -24%;
+    max-height: 665px;
+  }
+  .collaboration__content {
+    max-width: 450px;
+  }
+  .collaboration .section-head__title br {
+    display: none;
+  }
+}
+@media (max-width: 1130px) {
+  .collaboration .collaboration__image {
+    right: -29%;
+  }
+}
+
+.form {
+  display: flex;
+  gap: 36px 40px;
+  flex-wrap: wrap;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+.form__item {
+  position: relative;
+  border-radius: 40px;
+  width: 296px;
+}
+.form__item input {
+  font-family: "Inter", sans-serif;
+  background: #FFFFFF;
+  box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 40px;
+  border: none;
+  height: 72px;
+  padding: 24px 30px;
+  width: 100%;
+}
+.form__item--border input {
+  outline: 1px solid #ffffff !important;
+  outline-offset: 4px !important;
+  transition: all 0.3s;
+}
+.form__item--border input:hover {
+  outline: 1px solid #9B8D24 !important;
+}
+.form__item--border input:active, .form__item--border input:focus {
+  outline: 1px solid #374818 !important;
+}
+.form__item--btn {
+  width: 258px;
+}
+.form__item--checkbox {
+  text-align: left;
+  padding-left: 48px;
+}
+.form__item--icon {
+  display: flex;
+  align-items: center;
+}
+.form__item--icon input {
+  padding-left: 72px;
+}
+.form__item--icon svg {
+  position: absolute;
+  left: 29px;
+}
+.form__item--icon svg path {
+  transition: all 0.3s;
+  fill: #4A4A4A;
+  opacity: 0.2;
+}
+.form__item input:active,
+.form__item input:focus {
+  color: #000000;
+}
+.form__item input:active + svg path,
+.form__item input:focus + svg path {
+  fill: #91C137;
+  opacity: 1;
+}
+.form__politic {
+  font-family: "Inter", sans-serif;
+  text-align: left;
+  color: #807341;
+  text-decoration: none;
+  font-size: 16px;
+}
+.form__politic a {
+  display: block;
+  border-bottom: 1px solid;
+  max-width: max-content;
+  transition: all 0.3s;
+  border-color: #4A4A4A;
+  color: #4A4A4A;
+}
+.form__politic a:hover {
+  border-color: #0580F2;
+  color: #0580F2;
+}
+.form__item--checkbox input[type=checkbox] + .form__politic::before {
+  content: "";
+  background-image: url(../img/icon-checkbox.svg);
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  outline: 1px solid !important;
+  outline-color: #FFDF6C !important;
+  outline-offset: 3px !important;
+  transition: all 0.3s;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.form__item--checkbox input[type=checkbox]:hover + .form__politic::before {
+  outline-color: #AF9B26 !important;
+}
+.form__item--checkbox input[type=checkbox]:checked + .form__politic::before {
+  background-image: url(../img/icon-checkbox-on.svg);
+  outline-color: #FFDF6D !important;
+}
+@media (max-width: 1275px) {
+  .form__item {
+    width: 100%;
+  }
+  .form__item--btn {
+    order: 10;
+  }
+  .form__politic a {
+    display: initial;
   }
 }
 
