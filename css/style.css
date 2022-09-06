@@ -133,6 +133,16 @@ input[type=radio].visually-hidden {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .wrap {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 650px) {
+  .wrap {
+    padding: 0 20px;
+  }
+}
 
 .btn {
   font-family: "Oswald", sans-serif;
@@ -997,6 +1007,14 @@ input[type=radio].visually-hidden {
 @media (max-width: 1130px) {
   .collaboration .collaboration__image {
     right: -29%;
+  }
+}
+@media (max-width: 950px) {
+  .collaboration {
+    padding-bottom: 0;
+  }
+  .collaboration__image {
+    position: initial;
   }
 }
 
