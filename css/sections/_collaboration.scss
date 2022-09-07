@@ -97,8 +97,8 @@
 
     &__image {
       position: relative;
-      right: -25%;
-      max-height: 513px;
+      right: -12%;
+      height: 513px;
     }
   }
 
@@ -259,7 +259,8 @@
   @media (max-width: 950px) {
     gap: 40px 32px;
     align-items: center;
-    &__item--checkbox{
+
+    &__item--checkbox {
       flex-basis: calc(50% - 16px);
       flex-grow: 2;
     }

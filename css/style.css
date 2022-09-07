@@ -1024,8 +1024,8 @@ input[type=radio].visually-hidden {
   }
   .collaboration__image {
     position: relative;
-    right: -25%;
-    max-height: 513px;
+    right: -12%;
+    height: 513px;
   }
 }
 
