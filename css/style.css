@@ -1011,7 +1011,7 @@ input[type=radio].visually-hidden {
   }
 }
 @media (max-width: 1130px) {
-  .collaboration .collaboration__image {
+  .collaboration__image {
     right: -29%;
   }
 }
@@ -1019,8 +1019,13 @@ input[type=radio].visually-hidden {
   .collaboration {
     padding-bottom: 0;
   }
+  .collaboration__content {
+    max-width: 100%;
+  }
   .collaboration__image {
-    position: initial;
+    position: relative;
+    right: -25%;
+    max-height: 513px;
   }
 }
 
@@ -1142,6 +1147,20 @@ input[type=radio].visually-hidden {
   }
   .form__politic a {
     display: initial;
+  }
+}
+@media (max-width: 950px) {
+  .form {
+    gap: 40px 32px;
+    align-items: center;
+  }
+  .form__item--checkbox {
+    flex-basis: calc(50% - 16px);
+    flex-grow: 2;
+  }
+  .form__item--btn {
+    width: 258px;
+    order: initial;
   }
 }
 

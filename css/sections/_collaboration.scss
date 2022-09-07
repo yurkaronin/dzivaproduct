@@ -83,15 +83,22 @@
   }
 
   @media (max-width: 1130px) {
-    .collaboration__image {
+    &__image {
       right: -29%;
     }
   }
 
   @media (max-width: 950px) {
     padding-bottom: 0;
+
+    &__content {
+      max-width: 100%;
+    }
+
     &__image {
-      position: initial;
+      position: relative;
+      right: -25%;
+      max-height: 513px;
     }
   }
 
@@ -246,6 +253,20 @@
 
     &__politic a {
       display: initial;
+    }
+  }
+
+  @media (max-width: 950px) {
+    gap: 40px 32px;
+    align-items: center;
+    &__item--checkbox{
+      flex-basis: calc(50% - 16px);
+      flex-grow: 2;
+    }
+
+    &__item--btn {
+      width: 258px;
+      order: initial;
     }
   }
 }
