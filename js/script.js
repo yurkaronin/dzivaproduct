@@ -51,7 +51,7 @@ const catalogSlider = new Swiper('.js-catalog-slider', {
       loop: true,
     },
     // when window width is >= 480px
-    
+
     650: {
       slidesPerView: 2,
       spaceBetween: 32,
@@ -85,3 +85,24 @@ const catalogSlider = new Swiper('.js-catalog-slider', {
     prevEl: '.js-catalog-slider .swiper-button-prev',
   }
 });
+
+
+// аккордеоны 
+var acc = document.getElementsByClassName("accordion");
+if (acc) {
+  var i;
+  // Этот блок кода тупо раскрывает первую гармошку 
+  // acc[0].classList.toggle("active");
+  // acc[0].nextElementSibling.style.maxHeight = acc[0].nextElementSibling.scrollHeight + 24 + "px";
+  // acc[0].nextElementSibling.style.padding = "12px 24px";
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.parentNode.classList.toggle("active");
+      let panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      }
+    });
+  };
+};
