@@ -883,6 +883,14 @@ input[type=radio].visually-hidden {
     background-color: #fbfaf8;
   }
 }
+@media (max-width: 650px) {
+  .catalog .swiper-button-next {
+    right: -15px;
+  }
+  .catalog .swiper-button-prev {
+    left: -15px;
+  }
+}
 @media (max-width: 768px) {
   .catalog {
     padding: 55px 0 60px;
@@ -1536,6 +1544,96 @@ input[type=radio].visually-hidden {
 @media (max-width: 650px) {
   .faq .accordion span {
     font-size: 20px;
+  }
+}
+
+.production {
+  padding: 70px 0 77px;
+  background-color: #FBFAF8;
+}
+.production__content {
+  display: grid;
+  gap: 30px 32px;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 36px;
+}
+.production__sert {
+  grid-row: span 2;
+}
+.production__label {
+  padding-top: 16px;
+}
+.production__details {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #4A4A4A;
+}
+.production__details p:first-child {
+  margin-top: 0;
+}
+.production__details p:last-child {
+  margin-bottom: 0;
+}
+.production .label-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+.production .label-list a {
+  display: block;
+  max-width: max-content;
+  margin: 0 auto;
+}
+.production .label-list svg path {
+  transition: all 0.3s;
+}
+.production .label-list a:hover svg path {
+  fill: #0580F2;
+}
+.production .label-list a:hover svg .clear {
+  fill: #fff;
+}
+.production .label-list a:hover svg .color-fill {
+  fill: #0580F2;
+}
+.production .label-list a:hover svg .color-stroke {
+  stroke: #0580F2;
+}
+@media (max-width: 1145px) {
+  .production__content {
+    grid-template-columns: auto 1fr;
+    margin-bottom: 40px;
+  }
+  .production .production__sert {
+    grid-row: initial;
+  }
+  .production .label-list {
+    display: grid;
+    justify-content: flex-start;
+    gap: 49px 16px;
+  }
+  .production__details {
+    grid-column: 1/3;
+  }
+}
+@media (max-width: 1023px) {
+  .production__sert a {
+    display: block;
+    max-width: max-content;
+    margin: 0 auto;
+  }
+  .production__content {
+    grid-template-columns: 1fr;
+  }
+  .production__details {
+    grid-column: initial;
+  }
+}
+@media (max-width: 768px) {
+  .production {
+    padding: 55px 0 60px;
   }
 }
 

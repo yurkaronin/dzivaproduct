@@ -92,6 +92,17 @@
     }
   }
 
+  @media (max-width: 650px) {
+    .swiper-button-next {
+      right: -15px;
+    }
+
+    .swiper-button-prev {
+      left: -15px;
+    }
+
+  }
+
   @media (max-width: 768px) {
     padding: 55px 0 60px;
   }
