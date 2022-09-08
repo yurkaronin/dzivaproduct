@@ -38,10 +38,7 @@
       border: 0.0625rem solid rgba(var(--color-black-rgb), 0.1);
       background-color: #ffffff;
       border-radius: 40px;
-
-      transition-property: left, top, width, height, border-color, -webkit-box-shadow;
       transition-property: left, top, width, height, border-color, box-shadow;
-      transition-property: left, top, width, height, border-color, box-shadow, -webkit-box-shadow;
       transition-duration: 0.3s;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
       z-index: 1;
@@ -93,5 +90,9 @@
       right: -32px;
       background-color: #fbfaf8;
     }
+  }
+
+  @media (max-width: 768px) {
+    padding: 55px 0 60px;
   }
 }
