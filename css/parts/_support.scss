@@ -32,6 +32,7 @@ input[type=radio].visually-hidden {
   border-radius: 50%;
   transition: all 0.3s;
   top: 45.5%;
+  transform-origin: center;
 
   svg path {
     transition: all 0.3s;
@@ -39,6 +40,8 @@ input[type=radio].visually-hidden {
 
   &:hover {
     background-color: #91C137 !important;
+    width: 88px;
+    height: 88px;
 
     svg path {
       stroke: #ffffff;

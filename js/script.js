@@ -38,71 +38,93 @@ document.addEventListener("DOMContentLoaded", () => {
 
   });
 
-});
-// слайдер каталог 
-const catalogSlider = new Swiper('.js-catalog-slider', {
-  // Optional parameters
-  // loop: true,
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 32,
-      loop: true,
-    },
-    // when window width is >= 480px
-
-    650: {
-      slidesPerView: 2,
-      spaceBetween: 32,
-      loop: true,
-    },
-    769: {
-      slidesPerView: 3,
-      spaceBetween: 32,
-      loop: true,
-    },
-    // 1025: {
-    //   slidesPerView: 3,
-    //   spaceBetween: 32,
-    //   loop: true,
-    // },
-    1025: {
-      slidesPerView: 4,
-      spaceBetween: 32,
-      loop: true,
-    },
-    // when window width is >= 640px
-    1441: {
-      slidesPerView: 5,
-      spaceBetween: 32
-    }
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.js-catalog-slider .swiper-button-next',
-    prevEl: '.js-catalog-slider .swiper-button-prev',
-  }
-});
-
-
-// аккордеоны 
-var acc = document.getElementsByClassName("accordion");
-if (acc) {
-  var i;
-  // Этот блок кода тупо раскрывает первую гармошку 
-  // acc[0].classList.toggle("active");
-  // acc[0].nextElementSibling.style.maxHeight = acc[0].nextElementSibling.scrollHeight + 24 + "px";
-  // acc[0].nextElementSibling.style.padding = "12px 24px";
-
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-      this.parentNode.classList.toggle("active");
-      let panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
+  var swiper = new Swiper(".js-slider-gallery", {
+    // slidesPerView: "auto",
+    centeredSlides: true,
+    slidesPerView: 3,
+    spaceBetween: 8,
+    loop: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1.2,
+      },
+      650: {
+        slidesPerView: 1.2,
+      },
+      769: {
+        slidesPerView: 1.2,
+      },
+      1025: {
+        slidesPerView: 1.2,
+      },
+      1441: {
+        slidesPerView: 1.8,
       }
-    });
+    },
+    pagination: {
+      el: ".js-slider-gallery .swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.js-slider-gallery .swiper-button-next',
+      prevEl: '.js-slider-gallery .swiper-button-prev',
+    },
+  });
+
+  // слайдер каталог 
+  const catalogSlider = new Swiper('.js-catalog-slider', {
+    // loop: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 32,
+        loop: true,
+      },
+      650: {
+        slidesPerView: 2,
+        spaceBetween: 32,
+        loop: true,
+      },
+      769: {
+        slidesPerView: 3,
+        spaceBetween: 32,
+        loop: true,
+      },
+      1025: {
+        slidesPerView: 4,
+        spaceBetween: 32,
+        loop: true,
+      },
+      1441: {
+        slidesPerView: 5,
+        spaceBetween: 32
+      }
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.js-catalog-slider .swiper-button-next',
+      prevEl: '.js-catalog-slider .swiper-button-prev',
+    }
+  });
+
+  // аккордеоны 
+  var acc = document.getElementsByClassName("accordion");
+  if (acc) {
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.parentNode.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        }
+      });
+    };
   };
-};
+
+});
+
+
+
