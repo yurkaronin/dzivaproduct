@@ -1,0 +1,9 @@
+<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <mask id="a" fill="#fff">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 0h-8v12H0v8h12v12h8V20h12v-8H20V0Z" />
+  </mask>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M20 0h-8v12H0v8h12v12h8V20h12v-8H20V0Z" fill="#fff" />
+  <path
+    d="M12 0v-1h-1v1h1Zm8 0h1v-1h-1v1Zm-8 12v1h1v-1h-1ZM0 12v-1h-1v1h1Zm0 8h-1v1h1v-1Zm12 0h1v-1h-1v1Zm0 12h-1v1h1v-1Zm8 0v1h1v-1h-1Zm0-12v-1h-1v1h1Zm12 0v1h1v-1h-1Zm0-8h1v-1h-1v1Zm-12 0h-1v1h1v-1ZM12 1h8v-2h-8v2Zm1 11V0h-2v12h2ZM0 13h12v-2H0v2Zm1 7v-8h-2v8h2Zm11-1H0v2h12v-2Zm1 13V20h-2v12h2Zm7-1h-8v2h8v-2Zm-1-11v12h2V20h-2Zm13-1H20v2h12v-2Zm-1-7v8h2v-8h-2Zm-11 1h12v-2H20v2ZM19 0v12h2V0h-2Z"
+    fill="#DFDFDF" mask="url(#a)" />
+</svg>
