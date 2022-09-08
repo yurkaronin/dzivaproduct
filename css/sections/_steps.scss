@@ -117,25 +117,6 @@
     }
   }
 
-  &__footer {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    gap: 32px;
-    align-items: center;
-
-    p {
-      font-family: "Oswald", sans-serif;
-      font-style: normal;
-      font-weight: 250;
-      font-size: 24px;
-      line-height: 1.33;
-      text-align: right;
-      color: #374818;
-      margin: 0;
-    }
-  }
-
 
   @media (max-width: 1460px) {
     &__item {
@@ -180,7 +161,7 @@
     }
   }
 
-  @media (max-width:600px) {
+  @media (max-width:650px) {
     &__item {
       width: 100%;
       flex-direction: column;
@@ -209,10 +190,6 @@
     }
 
     &__item:last-child::after {
-      display: none;
-    }
-
-    &__footer {
       display: none;
     }
 

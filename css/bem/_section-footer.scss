@@ -1,0 +1,22 @@
+.section-footer {
+  display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    gap: 32px;
+    align-items: center;
+
+    p {
+      font-family: "Oswald", sans-serif;
+      font-style: normal;
+      font-weight: 250;
+      font-size: 24px;
+      line-height: 1.33;
+      text-align: right;
+      color: #374818;
+      margin: 0;
+    }
+
+    @media (max-width:720px) {
+      display: none;
+    }
+}
