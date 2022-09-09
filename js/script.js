@@ -1,3 +1,12 @@
+MicroModal.init({
+  openTrigger: 'data-custom-open',
+  closeTrigger: 'data-custom-close',
+  disableScroll: true,
+  disableFocus: true,
+  awaitOpenAnimation: true,
+  awaitCloseAnimation: true,
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   let menuButton = document.querySelector("#js-menu-btn");
   // прилипающая шапка 
@@ -20,8 +29,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // headerSearch.classList.remove('active');
   });
 
+  // сворачивать мобильное меню, если кликнули по одному из пунктов 
+  const menuItems = document.querySelectorAll('.mobile-menu__link');
+  for (let menuItemsEl of menuItems) {
+    menuItemsEl.addEventListener('click', function () {
+      document.body.classList.remove('mob-menu-open');
+    });
+  };
+
   // слайдер в первом экране 
-  const firstSwiper = new Swiper('.js-first-slider', {
+  const swiperFirst = new Swiper('.js-first-slider', {
     // Optional parameters
     // direction: 'vertical',
     loop: true,
@@ -38,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   });
 
-  var swiper = new Swiper(".js-slider-gallery", {
+  var swiperGallery = new Swiper(".js-slider-gallery", {
     // slidesPerView: "auto",
     centeredSlides: true,
     slidesPerView: 3,
@@ -72,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // слайдер каталог 
-  const catalogSlider = new Swiper('.js-catalog-slider', {
+  const swiperCatalog = new Swiper('.js-catalog-slider', {
     // loop: true,
     breakpoints: {
       320: {
@@ -127,16 +144,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Яндекс карта 
   if (document.querySelector('.js-map')) {
     // Интерактивная карта с гео меткой
-    let center = [45.066341574598155,38.95656499999995];
-  
+    let center = [45.066341574598155, 38.95656499999995];
+
     function init() {
-  
+
       let map = new ymaps.Map("map", {
         center: center, // ваши данные
         zoom: 17
       });
-  
-      let placemarRkschool = new ymaps.Placemark([45.066341574598155,38.95656499999995], {}, {
+
+      let placemarRkschool = new ymaps.Placemark([45.066341574598155, 38.95656499999995], {}, {
         iconLayout: 'default#image',
         /* говорим что будем отображать на карте в качестве геометки  */
         iconImageHref: './img/icon-map-mark-2.svg',
@@ -145,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
         /* размеры картинки  */
         iconImageOffset: [-22, -22]
       });
-  
+
       map.controls.remove('geolocationControl'); // удаляем геолокацию
       map.controls.remove('searchControl'); // удаляем поиск
       map.controls.remove('trafficControl'); // удаляем контроль трафика
@@ -154,22 +171,19 @@ document.addEventListener("DOMContentLoaded", () => {
       map.controls.remove('zoomControl'); // удаляем контрол зуммирования
       map.controls.remove('rulerControl'); // удаляем контрол правил
       map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
-  
+
       map.geoObjects.add(placemarRkschool);
-  
-        placemarRkschool.events
-          .add('mouseenter', function (e) {
-            e.get('target').options.set('iconImageHref', './img/icon-map-mark-2.svg');
-          })
-          .add('mouseleave', function (e) {
-            e.get('target').options.set('iconImageHref', './img/icon-map-mark-1.svg');
-          });
+
+      placemarRkschool.events
+        .add('mouseenter', function (e) {
+          e.get('target').options.set('iconImageHref', './img/icon-map-mark-2.svg');
+        })
+        .add('mouseleave', function (e) {
+          e.get('target').options.set('iconImageHref', './img/icon-map-mark-1.svg');
+        });
     }
-  
+
     ymaps.ready(init);
-  }
+  };
 
 });
-
-
-

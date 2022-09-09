@@ -17,6 +17,7 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/micromodal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -65,7 +66,7 @@
       </div>
 
       <div class="header__btn">
-        <a href="#" class="btn">Заказать звонок</a>
+        <a href="#" class="btn" data-custom-open="modal-callme">Заказать звонок</a>
       </div>
 
       <div class="header__menu-btn">
@@ -126,7 +127,7 @@
       </div>
 
       <div class="mobile-menu__btn">
-        <a href="#" class="btn">Заказать звонок</a>
+        <a href="#" class="btn" data-custom-open="modal-callme">Заказать звонок</a>
       </div>
     </div>
   </div>
@@ -145,7 +146,7 @@
           <p class="first__text">* - Собственная торговая марка (СТМ) – это когда производитель выпускает продукцию под
             брендом заказчика.</p>
 
-          <a href="#" class="btn">Заказать консультацию</a>
+          <a class="btn" data-custom-open="modal-consult">Заказать консультацию</a>
         </div>
         <div class="first__slider">
           <!-- Slider main container -->
@@ -191,7 +192,7 @@
       </div>
     </section>
     <!-- Направления производства -->
-    <section class="catalog">
+    <section class="catalog" id="directions-anchor">
       <div class="wrap">
         <div class="section-head">
           <p class="section-head__subtitle">Качественная, высокомаржинальная и быстрооборачиваемая продукция</p>
@@ -266,7 +267,7 @@
       </div>
     </section>
 
-    <section class="advantages">
+    <section class="advantages" id="advantages-anchor">
       <div class="wrap">
 
         <div class="section-head section-head--border">
@@ -422,7 +423,7 @@
 
       </div>
     </section>
-    <section class="steps">
+    <section class="steps" id="launch-stages-anchor">
       <div class="wrap">
         <div class="section-head section-head--border">
           <p class="section-head__subtitle">На запуск собственного бренда необходимо всего 14 дней</p>
@@ -493,7 +494,7 @@
         <!-- нижний блок с текстом и кнопкой  -->
         <div class="section-footer">
           <p>Вас заинтересовало наше предложение?</p>
-          <a href="" class="btn">Заказать консультацию</a>
+          <a class="btn" data-custom-open="modal-consult">Заказать консультацию</a>
         </div>
 
       </div>
@@ -564,13 +565,13 @@
         <!-- нижний блок с текстом и кнопкой  -->
         <div class="section-footer">
           <p>Присоединяйтесь к нам!</p>
-          <a href="" class="btn">Заказать консультацию</a>
+          <a class="btn" data-custom-open="modal-consult">Заказать консультацию</a>
         </div>
 
       </div>
     </section>
 
-    <section class="faq">
+    <section class="faq" id="issues-anchor">
       <div class="wrap">
 
         <div class="section-head section-head--border">
@@ -678,7 +679,7 @@
       </div>
     </section>
 
-    <section class="production">
+    <section class="production" id="production-anchor">
       <div class="wrap">
         <div class="section-head section-head--border">
           <p class="section-head__subtitle">Наше производство</p>
@@ -902,7 +903,7 @@
         <!-- нижний блок с текстом и кнопкой  -->
         <div class="section-footer">
           <p> Остались вопросы?</p>
-          <a href="" class="btn">Заказать консультацию</a>
+          <a class="btn" data-custom-open="modal-consult">Заказать консультацию</a>
         </div>
       </div>
     </section>
@@ -984,7 +985,7 @@
       </div>
     </section>
 
-    <section class="contacts">
+    <section class="contacts" id="contacts-anchor">
 
       <div class="contacts__left">
 
@@ -1034,7 +1035,7 @@
             мы в социальных сетях
           </div>
           <div class="contacts__item contacts__item--btn">
-            <a href="#" class="btn">Задать вопрос</a>
+            <a class="btn" data-custom-open="modal-quest">Задать вопрос</a>
           </div>
         </div>
       </div>
@@ -1062,9 +1063,196 @@
         </a>
       </div>
 
-
     </div>
   </footer>
+
+  <!-- модальные окна  -->
+  <!-- Заказать консультацию  -->
+  <div class="modal micromodal-slide" id="modal-consult">
+    <div class="modal__overlay" data-custom-close>
+      <div class="modal__container">
+
+        <header class="modal__header">
+          <div class="section-head section-head--border">
+            <p class="section-head__subtitle">мы свяжемся с вами в ближайшее время</p>
+            <h2 class="section-head__title">Заказать консультацию</h2>
+          </div>
+
+          <button class="modal__close" title="Закрыть окно" data-custom-close>
+            <svg width="19" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#fff" d="m2 1 16.97 16.97-1.414 1.415L.586 2.415z" />
+              <path fill="#fff" d="M19 2 2.03 18.97.614 17.557 17.585.586z" /></svg>
+          </button>
+        </header>
+
+        <div class="modal__body">
+          <form class="form" action="">
+            <div class="form__item form__item--border form__item--icon">
+              <input type="text" name="" id="" placeholder="Ваше имя">
+              <svg width="22" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15.736 6.776c.442.114.74 1.057.494 2.099-.247 1.048-.944 1.793-1.386 1.681 0 0-.344 1.944-.844 2.444v1.5c0 .5.049.879 1.347 1.418 1.299.54 4.66 1.99 5.321 2.635 1 .974 1.332 3.697 1.332 4.008 0 .218-.113.396-.427.489-1.07.297-4.616.95-10.573.95-5.957 0-9.504-.652-10.573-.95-.315-.093-.427-.27-.427-.49 0-.31.332-3.032 1.332-4.008.66-.644 4.02-2.122 5.321-2.634C7.953 15.407 8 15 8 14.5V13c-.5-.5-.844-2.444-.844-2.444-.442.112-1.14-.633-1.385-1.681-.247-1.042.051-1.986.494-2.1.025-.006-.242-1.95-.244-3.297 0-1.286.247-2.478.992-2.478C8.7 1 9.51 0 11.303 0c1.702 0 2.325.393 2.702 1 1.42 0 1.994 1 1.994 2.5.001 1-.314 3.263-.264 3.276Z"
+                  fill="#4A4A4A" /></svg>
+            </div>
+            <div class="form__item form__item--border form__item--icon">
+              <input type="tel" name="" id="" placeholder="Телефон">
+              <svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.095 16.762c-1.047 0-3.666-2.095-4.714-3.143-1.047-1.048-3.143-3.667-3.143-4.715 0-1.047 2.618-2.095 2.618-2.618L5.762 0H3.666C2.619 0 0 3.143 0 5.238c0 2.095 1.048 6.285 5.762 11 4.715 4.714 8.904 5.762 11 5.762C18.857 22 22 19.381 22 18.333v-2.095l-6.285-2.096c-.525.001-1.571 2.62-2.62 2.62Z"
+                  fill="#1E2832" /></svg>
+            </div>
+
+            <div class="form__item form__item--checkbox">
+              <label class="form__label">
+                <input class="visually-hidden" type="checkbox" name="confirm" checked required>
+                <span class="form__politic">Согласен на обработку <a href="#" target="_blank">персональных
+                    данных</a></span>
+              </label>
+            </div>
+
+            <div class="form__item form__item--btn">
+              <button class="btn" type="submit">Заказать консультацию</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Заказать звоночек  -->
+  <div class="modal micromodal-slide" id="modal-callme">
+    <div class="modal__overlay" data-custom-close>
+      <div class="modal__container">
+
+        <header class="modal__header">
+          <div class="section-head section-head--border">
+            <p class="section-head__subtitle">мы свяжемся с вами в ближайшее время</p>
+            <h2 class="section-head__title">Заказать звонок</h2>
+          </div>
+
+          <button class="modal__close" title="Закрыть окно" data-custom-close>
+            <svg width="19" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#fff" d="m2 1 16.97 16.97-1.414 1.415L.586 2.415z" />
+              <path fill="#fff" d="M19 2 2.03 18.97.614 17.557 17.585.586z" /></svg>
+          </button>
+        </header>
+
+        <div class="modal__body">
+          <form class="form" action="">
+            <div class="form__item form__item--border form__item--icon">
+              <input type="text" name="" id="" placeholder="Ваше имя">
+              <svg width="22" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15.736 6.776c.442.114.74 1.057.494 2.099-.247 1.048-.944 1.793-1.386 1.681 0 0-.344 1.944-.844 2.444v1.5c0 .5.049.879 1.347 1.418 1.299.54 4.66 1.99 5.321 2.635 1 .974 1.332 3.697 1.332 4.008 0 .218-.113.396-.427.489-1.07.297-4.616.95-10.573.95-5.957 0-9.504-.652-10.573-.95-.315-.093-.427-.27-.427-.49 0-.31.332-3.032 1.332-4.008.66-.644 4.02-2.122 5.321-2.634C7.953 15.407 8 15 8 14.5V13c-.5-.5-.844-2.444-.844-2.444-.442.112-1.14-.633-1.385-1.681-.247-1.042.051-1.986.494-2.1.025-.006-.242-1.95-.244-3.297 0-1.286.247-2.478.992-2.478C8.7 1 9.51 0 11.303 0c1.702 0 2.325.393 2.702 1 1.42 0 1.994 1 1.994 2.5.001 1-.314 3.263-.264 3.276Z"
+                  fill="#4A4A4A" /></svg>
+            </div>
+            <div class="form__item form__item--border form__item--icon">
+              <input type="tel" name="" id="" placeholder="Телефон">
+              <svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.095 16.762c-1.047 0-3.666-2.095-4.714-3.143-1.047-1.048-3.143-3.667-3.143-4.715 0-1.047 2.618-2.095 2.618-2.618L5.762 0H3.666C2.619 0 0 3.143 0 5.238c0 2.095 1.048 6.285 5.762 11 4.715 4.714 8.904 5.762 11 5.762C18.857 22 22 19.381 22 18.333v-2.095l-6.285-2.096c-.525.001-1.571 2.62-2.62 2.62Z"
+                  fill="#1E2832" /></svg>
+            </div>
+
+            <div class="form__item form__item--checkbox">
+              <label class="form__label">
+                <input class="visually-hidden" type="checkbox" name="confirm" checked required>
+                <span class="form__politic">Согласен на обработку <a href="#" target="_blank">персональных
+                    данных</a></span>
+              </label>
+            </div>
+
+            <div class="form__item form__item--btn">
+              <button class="btn" type="submit">Заказать консультацию</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Спасыбо за заявку  -->
+  <div class="modal micromodal-slide modal--sps" id="modal-sps">
+    <div class="modal__overlay" data-custom-close>
+      <div class="modal__container">
+
+        <header class="modal__header">
+          <div class="section-head">
+            <p class="section-head__subtitle">мы свяжемся с вами в ближайшее время</p>
+            <h2 class="section-head__title">Спасибо, Ваша заявка принята.</h2>
+          </div>
+
+          <button class="modal__close" title="Закрыть окно" data-custom-close>
+            <svg width="19" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#fff" d="m2 1 16.97 16.97-1.414 1.415L.586 2.415z" />
+              <path fill="#fff" d="M19 2 2.03 18.97.614 17.557 17.585.586z" /></svg>
+          </button>
+        </header>
+      </div>
+    </div>
+  </div>
+  <!-- Задать вопрос  -->
+  <div class="modal micromodal-slide" id="modal-quest">
+    <div class="modal__overlay" data-custom-close>
+      <div class="modal__container">
+
+        <header class="modal__header">
+          <div class="section-head section-head--border">
+            <p class="section-head__subtitle">мы свяжемся с вами в ближайшее время</p>
+            <h2 class="section-head__title">Задать вопрос</h2>
+          </div>
+
+          <button class="modal__close" title="Закрыть окно" data-custom-close>
+            <svg width="19" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#fff" d="m2 1 16.97 16.97-1.414 1.415L.586 2.415z" />
+              <path fill="#fff" d="M19 2 2.03 18.97.614 17.557 17.585.586z" /></svg>
+          </button>
+        </header>
+
+        <div class="modal__body">
+          <form class="form" action="">
+
+            <div class="form__item form__item--border form__item--icon">
+              <input type="text" name="" id="" placeholder="Ваше имя">
+              <svg width="22" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15.736 6.776c.442.114.74 1.057.494 2.099-.247 1.048-.944 1.793-1.386 1.681 0 0-.344 1.944-.844 2.444v1.5c0 .5.049.879 1.347 1.418 1.299.54 4.66 1.99 5.321 2.635 1 .974 1.332 3.697 1.332 4.008 0 .218-.113.396-.427.489-1.07.297-4.616.95-10.573.95-5.957 0-9.504-.652-10.573-.95-.315-.093-.427-.27-.427-.49 0-.31.332-3.032 1.332-4.008.66-.644 4.02-2.122 5.321-2.634C7.953 15.407 8 15 8 14.5V13c-.5-.5-.844-2.444-.844-2.444-.442.112-1.14-.633-1.385-1.681-.247-1.042.051-1.986.494-2.1.025-.006-.242-1.95-.244-3.297 0-1.286.247-2.478.992-2.478C8.7 1 9.51 0 11.303 0c1.702 0 2.325.393 2.702 1 1.42 0 1.994 1 1.994 2.5.001 1-.314 3.263-.264 3.276Z"
+                  fill="#4A4A4A" /></svg>
+            </div>
+
+            <div class="form__item form__item--border form__item--icon">
+              <input type="tel" name="" id="" placeholder="Телефон">
+              <svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.095 16.762c-1.047 0-3.666-2.095-4.714-3.143-1.047-1.048-3.143-3.667-3.143-4.715 0-1.047 2.618-2.095 2.618-2.618L5.762 0H3.666C2.619 0 0 3.143 0 5.238c0 2.095 1.048 6.285 5.762 11 4.715 4.714 8.904 5.762 11 5.762C18.857 22 22 19.381 22 18.333v-2.095l-6.285-2.096c-.525.001-1.571 2.62-2.62 2.62Z"
+                  fill="#1E2832" /></svg>
+            </div>
+
+            <div class="form__item form__item--border form__item--icon form__item--text">
+              <textarea name="" id="" cols="30" rows="10">Сообщение</textarea>
+              <svg width="24" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path 
+                  d="M13.64 13.245a2.302 2.302 0 0 1-1.64.68c-.619 0-1.201-.241-1.64-.679L6.5 9.384 0 15.882V16a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1v-.116l-6.499-6.5-3.86 3.86ZM0 2.886v11.227L5.614 8.5 0 2.886ZM23 0H1a1 1 0 0 0-1 1v.119l11.244 11.244a1.067 1.067 0 0 0 1.513-.001L24 1.117V1a1 1 0 0 0-1-1Zm1 14.116V2.886L18.385 8.5 24 14.116Z"
+                  fill="#4A4A4A" /></svg>
+            </div>
+
+            <div class="form__item form__item--checkbox">
+              <label class="form__label">
+                <input class="visually-hidden" type="checkbox" name="confirm" checked required>
+                <span class="form__politic">Согласен на обработку <a href="#" target="_blank">персональных
+                    данных</a></span>
+              </label>
+            </div>
+
+            <div class="form__item form__item--btn">
+              <button class="btn" type="submit">Заказать консультацию</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=7a49471f-d85f-4e70-9dd3-a7a498699c63&lang=ru_RU"

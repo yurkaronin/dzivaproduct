@@ -14,3 +14,11 @@
 @import "contacts";
 
 @import "footer";
+
+.modal {
+  display: none;
+}
+
+.modal.is-open {
+  display: block;
+}
