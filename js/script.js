@@ -56,35 +56,17 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   var swiperGallery = new Swiper(".js-slider-gallery", {
-    // slidesPerView: "auto",
+    slidesPerView: "auto",
     centeredSlides: true,
-    slidesPerView: 3,
     spaceBetween: 8,
     loop: true,
-    breakpoints: {
-      320: {
-        slidesPerView: 1.2,
-      },
-      650: {
-        slidesPerView: 1.2,
-      },
-      769: {
-        slidesPerView: 1.2,
-      },
-      1025: {
-        slidesPerView: 1.2,
-      },
-      1441: {
-        slidesPerView: 1.8,
-      }
-    },
     pagination: {
-      el: ".js-slider-gallery .swiper-pagination",
-      clickable: true,
+      el: ".gallery .swiper-pagination",
+      type: "fraction",
     },
     navigation: {
-      nextEl: '.js-slider-gallery .swiper-button-next',
-      prevEl: '.js-slider-gallery .swiper-button-prev',
+      nextEl: '.gallery .swiper-button-next',
+      prevEl: '.gallery .swiper-button-prev',
     },
   });
 
@@ -115,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
       1441: {
         slidesPerView: 5,
         spaceBetween: 32
-      }
+      },
     },
 
     // Navigation arrows

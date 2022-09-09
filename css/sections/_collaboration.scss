@@ -91,19 +91,47 @@
   @media (max-width: 950px) {
     padding-bottom: 0;
 
+    .wrap {
+      padding: 0;
+    }
+
     &__content {
       max-width: 100%;
+      padding: 0 48px;
     }
 
     &__image {
       position: relative;
-      right: -12%;
-      height: 513px;
+      right: 0;
+      margin-left: auto;
+      height: 372px;
+      min-height: initial;
+      max-height: initial;
+
+      img {
+        max-width: 100%;
+        width: initial;
+        
+      }
     }
   }
 
   @media (max-width: 768px) {
     padding: 55px 0 0;
+  }
+
+  @media (max-width: 650px) {
+    &__image {
+      position: relative;
+      right: 0;
+      height: 300px;
+
+      img {
+        max-width: 100%;
+        width: initial;
+      }
+    }
+
   }
 
 }

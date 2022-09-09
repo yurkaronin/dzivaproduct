@@ -114,7 +114,20 @@
     }
   }
 
+
+
   @media (max-width: 768px) {
     padding: 55px 0 60px;
+  }
+
+  @media (max-width: 720px) {
+    .production__content {
+      margin-bottom: 11px;
+    }
+    .section-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
   }
 }

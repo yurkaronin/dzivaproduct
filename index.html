@@ -5,6 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+
   <title>Жива продукт - Производство продуктов правильного питания</title>
 
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
@@ -66,7 +72,7 @@
       </div>
 
       <div class="header__btn">
-        <a href="#" class="btn" data-custom-open="modal-callme">Заказать звонок</a>
+        <a class="btn" data-custom-open="modal-callme">Заказать звонок</a>
       </div>
 
       <div class="header__menu-btn">
@@ -127,7 +133,7 @@
       </div>
 
       <div class="mobile-menu__btn">
-        <a href="#" class="btn" data-custom-open="modal-callme">Заказать звонок</a>
+        <a class="btn" data-custom-open="modal-callme">Заказать звонок</a>
       </div>
     </div>
   </div>
@@ -417,7 +423,11 @@
         </div>
 
         <div class="collaboration__image">
-          <img src="./img/dude.jpg" alt="Мужик с пальцем" width="1277">
+          <picture>
+            <source media="(max-width: 950px)" srcset="./img/dude-375.jpg">
+            <!-- <source media="(max-width: 650px)" srcset="./img/dude-950.jpg"> -->
+            <img src="./img/dude.jpg" alt="Мужик с пальцем" width="1277">
+          </picture>
         </div>
 
 
@@ -964,24 +974,29 @@
             </div>
 
           </div>
-          <!-- If we need pagination -->
+        </div>
           <div class="gallery__pagination">
             <div class="swiper-pagination"></div>
           </div>
 
-          <!-- If we need navigation buttons -->
-          <button class="swiper-button-prev">
-            <svg width="32" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 5h26" stroke="#91C137" stroke-width="2" stroke-linecap="round" />
-              <path class="cust" d="m0 5 8-5v10L0 5Z" fill="#91C137" /></svg>
-          </button>
-          <button class="swiper-button-next">
-            <svg width="32" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M27 5H1" stroke="#91C137" stroke-width="2" stroke-linecap="round" />
-              <path class="cust" d="m32 5-8 5V0l8 5Z" fill="#91C137" /></svg>
-          </button>
+
+        <div class="slider-fixed-nav">
+          <div class="slider-fixed-nav__wrap">
+            <button class="swiper-button-prev">
+              <svg width="32" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 5h26" stroke="#91C137" stroke-width="2" stroke-linecap="round" />
+                <path class="cust" d="m0 5 8-5v10L0 5Z" fill="#91C137" /></svg>
+            </button>
+            <button class="swiper-button-next">
+              <svg width="32" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27 5H1" stroke="#91C137" stroke-width="2" stroke-linecap="round" />
+                <path class="cust" d="m32 5-8 5V0l8 5Z" fill="#91C137" /></svg>
+            </button>
+          </div>
 
         </div>
+
+
       </div>
     </section>
 
@@ -1231,7 +1246,7 @@
             <div class="form__item form__item--border form__item--icon form__item--text">
               <textarea name="" id="" cols="30" rows="10">Сообщение</textarea>
               <svg width="24" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path 
+                <path
                   d="M13.64 13.245a2.302 2.302 0 0 1-1.64.68c-.619 0-1.201-.241-1.64-.679L6.5 9.384 0 15.882V16a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1v-.116l-6.499-6.5-3.86 3.86ZM0 2.886v11.227L5.614 8.5 0 2.886ZM23 0H1a1 1 0 0 0-1 1v.119l11.244 11.244a1.067 1.067 0 0 0 1.513-.001L24 1.117V1a1 1 0 0 0-1-1Zm1 14.116V2.886L18.385 8.5 24 14.116Z"
                   fill="#4A4A4A" /></svg>
             </div>
