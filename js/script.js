@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const swiperFirst = new Swiper('.js-first-slider', {
     // Optional parameters
     // direction: 'vertical',
+    
     loop: true,
     effect: 'fade',
     fadeEffect: {
